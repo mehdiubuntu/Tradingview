@@ -1,6 +1,5 @@
-import { CaretDownIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import {  ChevronRightIcon } from "@radix-ui/react-icons";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-
 import { Product_First, Product_Second } from "../statics/objects";
 import React from "react";
 import Link from "next/link";

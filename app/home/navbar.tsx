@@ -19,6 +19,7 @@ import prisma from "@/prisma/client";
 import axios from "axios";
 import Header from "../components/header";
 import { string } from "zod";
+import DarkMode from "../components/header";
 interface x {
   id: number;
 }
@@ -26,11 +27,23 @@ const Navbar = () => {
   const [userGmail, setUserGmail] = useState<string>("");
   useEffect(() => {
     const userGmail = async () => {
+      ///////////////////////////////////////////
+      // const gmail = await axios.get<string>(`/api/user/${id}`, {
+      //   params: { id: 3, name: "mehdi", family: "mohseni" },
+      // });
+      ///////////////////////////////////////////
+
       let userId = localStorage.getItem("userid");
-      console.log(userId, typeof userId);
-      const gmail = await axios.get<string>("/api/userg", {
-        params: { User: userId },
+      const gmail = await axios.get<string>(`/api/userg/`, {
+        params: { id: userId, name: "mehdi" },
       });
+
+      ////////////////////////////////////////////////////
+      // const gmail = await axios.get(
+      //   `/api/user/${id}?name=mahin&family=naderipour`
+      // );
+      // console.log(gmail);
+      /////////////////////////////////////////
       setUserGmail(gmail.data);
     };
     userGmail();
@@ -166,7 +179,7 @@ const Navbar = () => {
               <DropdownMenu.Separator className="h-[1px] bg-slate-200  m-[5px]" />
               <DropdownMenu.Item className="text-[13px] justify-between leading-none rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-zinc-200 data-[disabled]:pointer-events-none data-[highlighted]:bg-slate-100">
                 <span>Dark color theme</span>
-                <Header />
+                <DarkMode />
               </DropdownMenu.Item>
               <DropdownMenu.Sub>
                 <DropdownMenu.SubTrigger className="text-[13px] leading-none rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-cyan-800 data-[disabled]:pointer-events-none data-[highlighted]:bg-slate-100">

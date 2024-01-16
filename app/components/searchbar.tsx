@@ -13,6 +13,11 @@ const Searchbar = (props: props) => {
   const searchRef1 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+const ALLFFCS = async ()=>{
+
+}
+
+
     let handler = (event: { target: any }) => {
       if (
         !searchRef.current?.contains(event.target) &&
@@ -156,7 +161,7 @@ const Searchbar = (props: props) => {
                 EU
               </Avatar.Fallback>
             </Avatar.Root>
-            <div className="flex-row  grow cursor-default  ">
+            <div className="flex-row lg:flex lg:gap-2 lg:items-center   grow cursor-default  ">
               <p>EURUSD</p>
               <p className="uppercase text-zinc-600 font-light text-sm">
                 EURO FX/U.U. DOLLAR

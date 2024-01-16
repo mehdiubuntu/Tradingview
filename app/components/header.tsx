@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { IoSearchOutline, IoReorderThree } from "react-icons/io5";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { BsFillMoonStarsFill } from "react-icons/bS";
 
-const Header = () => {
+const DarkMode = () => {
   const size = "24px";
   const [darkMode, setDarkMode] = useState<boolean | undefined>(undefined);
   const switchMode = () => {
@@ -23,11 +24,10 @@ const Header = () => {
   }, [darkMode]);
 
   return (
-    <div onClick={switchMode} className="border border-red-200 w-10 h-10">
-        
-      {!darkMode ? <IoSearchOutline /> : <IoReorderThree />}
+    <div onClick={switchMode} className="text-white cursor-pointer">
+      {!darkMode ? <MdOutlineWbSunny /> : <BsFillMoonStarsFill />}
     </div>
   );
 };
 
-export default Header;
+export default DarkMode;

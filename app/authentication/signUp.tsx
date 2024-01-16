@@ -15,13 +15,11 @@ const SignUp = () => {
       <div className=" text-center font-bold text-lg">Sign up with email</div>
       <form
         onSubmit={handleSubmit(async (userData) => {
-          const response = await axios.post("/api/user", userData);
-          console.log(response.data);
-          localStorage.setItem("userid", "3");
-          // localStorage.setItem('token',JSON.stringify(response.data))
-          // if (response.status === 201) router.push("/home");
+          const response = await axios.post("/api/userg", userData);
+          localStorage.setItem("userid", response.data);
+          router.push("/home");
         })}
-        className="max-w-sm mx-auto   gap-4"
+        className="max-w-sm mx-auto gap-4"
       >
         <div className="mb-5">
           <label

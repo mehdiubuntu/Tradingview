@@ -1,13 +1,22 @@
 import { BiCandles } from "react-icons/bi";
-import { MdRadar } from "react-icons/md";
-import { FaRegCalendar } from "react-icons/fa";
+import { MdRadar, MdSpaceDashboard } from "react-icons/md";
+import {
+  FaRegCalendar,
+  FaChartArea,
+  FaBoxOpen,
+  FaSignOutAlt,
+  FaSignInAlt,
+} from "react-icons/fa";
 import {
   RiInstagramFill,
   RiFacebookBoxFill,
   RiTwitterFill,
   RiYoutubeFill,
+  RiInboxArchiveFill,
 } from "react-icons/ri";
-import star from "../assets/Star.png";
+import { SiHomeassistant } from "react-icons/si";
+import { PiNewspaperFill } from "react-icons/pi";
+import { CgMore } from "react-icons/cg";
 export const Product_First = [
   {
     logo: <BiCandles className="text-2xl" />,
@@ -199,107 +208,107 @@ export const Sidebar = [
   {
     id: 1,
     title: "Dashboard",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <MdSpaceDashboard />,
     authenticated: true,
   },
   {
     id: 2,
     title: "Inbox",
-    href: "#",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <RiInboxArchiveFill />,
     authenticated: true,
     notification: 3,
   },
   {
     id: 3,
     title: "Products",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <FaBoxOpen />,
     authenticated: true,
   },
   {
     id: 4,
     title: "Community",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <SiHomeassistant />,
     authenticated: true,
   },
   {
     id: 5,
     title: "Markets",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <FaChartArea />,
     authenticated: true,
   },
   {
     id: 6,
     title: "News",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <PiNewspaperFill />,
     authenticated: true,
   },
   {
     id: 7,
     title: "More",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/home",
+    logo: <CgMore />,
     authenticated: true,
   },
   {
     id: 8,
     title: "Sign out",
     href: "../authentication/signout",
-    logo: <RiInstagramFill />,
+    logo: <FaSignOutAlt />,
     authenticated: true,
   },
   {
     id: 9,
     title: "Products",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/root",
+    logo: <FaBoxOpen />,
     authenticated: false,
   },
   {
     id: 10,
     title: "Community",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/root",
+    logo: <SiHomeassistant />,
     authenticated: false,
   },
   {
     id: 11,
     title: "Markets",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/root",
+    logo: <FaChartArea />,
     authenticated: false,
   },
   {
     id: 12,
     title: "News",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/root",
+    logo: <PiNewspaperFill />,
     authenticated: false,
   },
   {
     id: 13,
     title: "More",
-    href: "/",
-    logo: <RiInstagramFill />,
+    href: "/root",
+    logo: <CgMore />,
     authenticated: false,
   },
   {
     id: 14,
     title: "Sign In",
     href: "../authentication",
-    logo: <RiInstagramFill />,
+    logo: <FaSignInAlt />,
     authenticated: false,
   },
   {
     id: 15,
     title: "Sign Up",
     href: "../authentication",
-    logo: <RiInstagramFill />,
+    logo: <FaSignOutAlt />,
     authenticated: false,
   },
 ];

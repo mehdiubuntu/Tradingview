@@ -27,7 +27,6 @@ const social = () => {
                     fill={true}
                     alt="?"
                     className="absolute"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   ></Image>
                 </div>
               </div>
@@ -94,7 +93,6 @@ const Mocknews = ({
           fill={true}
           alt="?"
           className=" absolute border-none rounded-xl "
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ></Image>
       </div>
 
